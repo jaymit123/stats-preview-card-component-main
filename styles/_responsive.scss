@@ -1,0 +1,36 @@
+$table-width: 768px;
+$desktop-width: 1024px;
+$desktop-large-width: 1440px;
+
+@mixin media($type, $range: "only") {
+    @if $type == "mobile" {
+        @media (max-width: #{$table-width - 1px}) {
+            @content;
+        }
+    } @else if $type == "tablet" {
+        @if $range == "only" {
+            @media (min-width: #{$table-width}) and (max-width: #{$desktop-width - 1px }) {
+                @content;
+            }
+        } @else if $range == ">=" {
+            @media (min-width: #{$table-width}) {
+                @content;
+            }
+        }
+    } @else if $type == "desktop" {
+        @if $range == "only" {
+            @media (min-width: #{$desktop-width}) and (max-width: #{$desktop-large-width - 1px }) {
+                @content;
+            }
+        } @else if $range == ">=" {
+            @media (min-width: #{$desktop-width}) {
+                @content;
+            }
+        }
+
+    } @else if $type == "desktop-large" {
+        @media (min-width: #{$desktop-large-width}) {
+            @content;
+        }
+    }
+}

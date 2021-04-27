@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+:root {
+  /* typography */
+  --color-text-primary: hsl(0, 0%, 100%);
+  --color-text-paragraph: hsla(0, 0%, 100%, 0.75);
+  --color-text-stats: hsla(0, 0%, 100%, 0.6);
+  --color-primary-preview: hsla(272, 55%, 60%, 50%);
+  --color-primary-preview-dark: hsla(272, 55%, 60%, 100%);
+  --color-primary-background: hsl(233, 47%, 7%);
+  --color-primary-dark: hsl(244, 38%, 16%);
+  --color-primary-light: hsl(277, 64%, 61%, 0.1);
+}
+
+body {
+  background: var(--color-primary-background);
+}
+
+h1 {
+  color: var(--color-text-primary);
+}
+
+p {
+  color: var(--color-text-paragraph);
+}
+
+h2 {
+  color: var(--color-text-stats);
+}
+
+:root {
+  --font-family-primary: "Inter";
+  --font-family-secondary: "Lexend Deca";
+  --text-base-size: 15px;
+  --text-scale-ratio: 1.2;
+  --text-weight-heading: 700;
+  --text-weight-paragraph: 400;
+  --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+  --text-sm:calc(1em / var(--text-scale-ratio));
+  --text-md: calc(1em * var(--text-scale-ratio));
+  --text-lg:calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+}
+
+html, body {
+  font-size: var(--text-base-size);
+  font-family: var(--font-family-primary);
+  color: var(--color-text-primary);
+}
+
+h1, h2, h3, h4 {
+  color: var(--color-text-primary);
+}
+
+h1, .text-xxxl {
+  font-size: var(--text-xxl);
+}
+
+h2, .text-xxl {
+  font-size: var(--text-xxl);
+}
+
+h3, .text-xl {
+  font-size: var(--text-xl);
+}
+
+h4, .text-lg {
+  font-size: var(--text-lg);
+}
+
+h5, .text-md {
+  font-size: var(--text-md);
+}
+
+h6, .text-sm, .preview__card__content__description {
+  font-size: var(--text-sm);
+}
+
+.text-xs, .preview__card__content__stats__info__type {
+  font-size: var(--text-xs);
+}
+
+h1 {
+  font-weight: var(--text-weight-heading);
+}
+
+p {
+  font-weight: var(--text-weight-paragraph);
+}
+
+:root {
+  --preview-card-border-radius: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.preview__card {
+  flex-basis: 80%;
+  background: var(--color-primary-dark);
+  border-radius: var(--preview-card-border-radius);
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .preview__card {
+    flex-basis: 40%;
+  }
+}
+.preview__card__header {
+  display: block;
+  position: relative;
+}
+.preview__card__header img {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+  display: block;
+}
+@media (max-width: 767px) {
+  .preview__card__header img {
+    border-top-left-radius: var(--preview-card-border-radius);
+    border-top-right-radius: var(--preview-card-border-radius);
+  }
+}
+.preview__card__header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(var(--color-primary-preview), var(--color-primary-preview));
+}
+@media (max-width: 767px) {
+  .preview__card__header::after {
+    border-top-left-radius: var(--preview-card-border-radius);
+    border-top-right-radius: var(--preview-card-border-radius);
+  }
+}
+.preview__card__content {
+  padding: 2rem;
+  text-align: center;
+}
+.preview__card__content__title__highlight {
+  color: var(--color-primary-preview-dark);
+}
+.preview__card__content__description {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 0.75rem;
+  line-height: 1.25rem;
+}
+.preview__card__content__stats__info {
+  display: block;
+}
+.preview__card__content__stats__info__type {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.0725rem;
+}
+.preview__card__content__stats__info + .preview__card__content__stats__info {
+  margin-top: 1rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=styles.css.map */

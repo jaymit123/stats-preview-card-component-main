@@ -1,0 +1,109 @@
+@use './colors' as *;
+@use './typography' as *;
+@use './responsive' as *;
+
+:root {
+  --preview-card-border-radius: 5px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  &__card {
+    flex-basis: 80%;
+    background: var(--color-primary-dark);
+    border-radius: var(--preview-card-border-radius);
+
+    @include media("tablet") {
+      flex-basis: 40%;
+    }
+
+    &__header {
+      display: block;
+      position: relative;
+      img {
+        position: relative;
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+        display: block;
+        @include media("mobile") {
+          border-top-left-radius: var(--preview-card-border-radius);
+          border-top-right-radius: var(--preview-card-border-radius);
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(var(--color-primary-preview), var(--color-primary-preview));
+        @include media("mobile") {
+          border-top-left-radius: var(--preview-card-border-radius);
+          border-top-right-radius: var(--preview-card-border-radius);
+        }
+      }
+    }
+
+    &__content {
+      padding: 2rem;
+      text-align: center;
+
+      &__title {
+        &__highlight {
+          color: var(--color-primary-preview-dark);
+        }
+      }
+
+      &__description {
+        @extend .text-sm;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 0.75rem;
+        line-height: 1.25rem;
+      }
+
+      &__stats {
+        &__info {
+          display: block;
+          &__type {
+            @extend .text-xs;
+            text-transform: uppercase;
+            color: hsla(0, 0%, 100%, 0.75);
+            letter-spacing: 0.0725rem;
+          }
+          & + & {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

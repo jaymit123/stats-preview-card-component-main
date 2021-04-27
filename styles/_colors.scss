@@ -1,0 +1,28 @@
+:root {
+    /* typography */
+    --color-text-primary: hsl(0, 0%, 100%);
+    --color-text-paragraph: hsla(0, 0%, 100%, 0.75);
+    --color-text-stats: hsla(0, 0%, 100%, 0.6);
+    --color-primary-preview: hsla(272, 55%, 60%, 50%);
+    --color-primary-preview-dark: hsla(272, 55%, 60%, 100%);
+
+    --color-primary-background: hsl(233, 47%, 7%);
+    --color-primary-dark: hsl(244, 38%, 16%);
+    --color-primary-light: hsl(277, 64%, 61%, 0.1);
+}
+
+body {
+    background: var(--color-primary-background);
+}
+
+h1 {
+    color: var(--color-text-primary);
+}
+
+p {
+    color: var(--color-text-paragraph);
+}
+
+h2 {
+    color: var(--color-text-stats);
+}
