@@ -106,7 +106,6 @@ body {
             justify-content: space-between;
           }
           &__info {
-            display: block;
             &__type {
               @extend .text-xs;
               text-transform: uppercase;

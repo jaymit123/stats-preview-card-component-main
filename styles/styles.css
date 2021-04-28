@@ -199,9 +199,6 @@ body {
     justify-content: space-between;
   }
 }
-.preview__card__content__main__stats__info {
-  display: block;
-}
 .preview__card__content__main__stats__info__type {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.75);

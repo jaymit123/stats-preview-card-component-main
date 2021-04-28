@@ -28,17 +28,11 @@ Users should be able to:
 
 ![](./screenshot.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://jaydesai-stats-preview-card.netlify.app/](https://jaydesai-stats-preview-card.netlify.app/)
 
 ## My process
 
@@ -49,6 +43,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- SCSS Preprocessor
 
 
 ### What I learned
@@ -109,7 +104,7 @@ Understand responsive images in a better way
 - [Overlay Color / Tinted Effec](https://css-tricks.com/tinted-images-multiple-backgrounds/) - This helped with understanding how achieve the tinted effect using css
 - [Using picture html5 tag for responsive images](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/) - Amazing tutorial on how to manage images using html5 tag picture
 - [Using object-fit and object-position](https://www.sitepoint.com/using-css-object-fit-object-position-properties/)
--[overlay gradient on image tag]()
+-[overlay gradient on image tag](https://www.solodev.com/blog/web-design/how-to-add-transparent-overlays-to-images-with-css.stml)
 - [When to use margin vs padding](https://stackoverflow.com/questions/2189452/when-to-use-margin-vs-padding-in-css)
 
 Leant about text properties
