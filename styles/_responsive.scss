@@ -16,6 +16,10 @@ $desktop-large-width: 1440px;
             @media (min-width: #{$table-width}) {
                 @content;
             }
+        } @else if $range == "<=" {
+            @media (max-width: #{$table-width}) {
+                @content;
+            }
         }
     } @else if $type == "desktop" {
         @if $range == "only" {

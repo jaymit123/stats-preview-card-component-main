@@ -14,7 +14,6 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -77,7 +76,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
         position: relative;
         object-fit: cover;
         width: 100%;
-        max-height: 100%;
+        height: 100%;
         display: block;
       }     
       &::after {
@@ -92,6 +91,12 @@ Then crop/optimize/edit your image however you like, add it to your project, and
     }
   }
 ```
+
+3. If inner content is overflowing and not displaying the radius of border, user overflow:hidden
+
+https://markheath.net/post/keep-inside-rounded-corners-css
+
+
 
 
 

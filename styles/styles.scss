@@ -28,10 +28,26 @@ body {
     flex-basis: 80%;
     background: var(--color-primary-dark);
     border-radius: var(--preview-card-border-radius);
+    overflow: hidden;
 
     @include media("tablet") {
       flex-basis: 40%;
     }
+
+    @include media("desktop", ">=") {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    @include media("desktop") {
+      flex-basis: 70%;
+    }
+
+    @include media("desktop-large") {
+      flex-basis: 53%;
+    }
+
+
 
     &__header {
       display: block;
@@ -40,12 +56,8 @@ body {
         position: relative;
         object-fit: cover;
         width: 100%;
-        max-height: 100%;
+        height: 100%;
         display: block;
-        @include media("mobile") {
-          border-top-left-radius: var(--preview-card-border-radius);
-          border-top-right-radius: var(--preview-card-border-radius);
-        }
       }
       &::after {
         content: "";
@@ -55,7 +67,7 @@ body {
         width: 100%;
         height: 100%;
         background: linear-gradient(var(--color-primary-preview), var(--color-primary-preview));
-        @include media("mobile") {
+        @include media("tablet", "<=") {
           border-top-left-radius: var(--preview-card-border-radius);
           border-top-right-radius: var(--preview-card-border-radius);
         }
@@ -65,33 +77,47 @@ body {
     &__content {
       padding: 2rem;
       text-align: center;
-
+      @include media("desktop", ">=") {
+        text-align: start;
+        padding: 2.5rem;
+      }
       &__title {
         &__highlight {
           color: var(--color-primary-preview-dark);
         }
       }
 
-      &__description {
-        @extend .text-sm;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-        padding-left: 1rem;
-        padding-right: 0.75rem;
-        line-height: 1.25rem;
-      }
+      &__main {
+        padding: 0 1rem;
+        @include media("desktop", ">=") {
+          padding-left: 0;
+          padding-right: 3rem;
+        }
+        &__description {
+          @extend .text-sm;
+          margin-top: 1rem;
+          margin-bottom: 2rem;
+          line-height: 1.50rem;
+        }
 
-      &__stats {
-        &__info {
-          display: block;
-          &__type {
-            @extend .text-xs;
-            text-transform: uppercase;
-            color: hsla(0, 0%, 100%, 0.75);
-            letter-spacing: 0.0725rem;
+        &__stats {
+          @include media("desktop", ">=") {
+            display: flex;
+            justify-content: space-between;
           }
-          & + & {
-            margin-top: 1rem;
+          &__info {
+            display: block;
+            &__type {
+              @extend .text-xs;
+              text-transform: uppercase;
+              color: hsla(0, 0%, 100%, 0.75);
+              letter-spacing: 0.0725rem;
+            }
+            & + & {
+              @include media("tablet", "<=") {
+                margin-top: 1rem;
+              }
+            }
           }
         }
       }
