@@ -18,8 +18,9 @@
   <div class="preview">
     <main class="preview__card">
       <picture class="preview__card__header">
-        <source srcset="./images/image-header-mobile.jpg" media="(max-width:768px)">
-        <source srcset="./images/image-header-desktop.jpg" media="(min-width:768px)">
+        <source srcset="./images/image-header-mobile.jpg 320w" sizes="100vw" media="(max-width:768px)">
+        <source srcset="./images/image-header-desktop.jpg 768w" sizes="100vw" media="(max-width:1440px)">
+        <source srcset="./images/image-header-desktop.jpg 1024w" sizes="75vw" media="(min-width:1440px)">
         <img src="./images/image-header-mobile.jpg" alt="team meeting">
       </picture>
       <div class="preview__card__content">
